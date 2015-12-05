@@ -1,0 +1,29 @@
+{
+  "name": "chimerairc-server",
+  "version": "0.0.1",
+  "description": "Server for embeding an irc channel to a website",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "node",
+    "irc",
+    "chat"
+  ],
+  "author": "Teemu Nieminen",
+  "license": "MIT",
+  "dependencies": {
+    "bunyan": "^1.5.1",
+    "cron": "^1.0.9",
+    "primus": "^4.0.0",
+    "redis": "^2.0.1",
+    "request": "^2.64.0",
+    "ws": "^0.8.0"
+  },
+  "devDependencies": {}
+}

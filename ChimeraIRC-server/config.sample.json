@@ -1,0 +1,33 @@
+{
+    "server": {
+        "port": 9898,
+        "allowedHost": ["localhost", "127.0.0.1"],
+        "allowedOrigin": ["*"],
+        "allowNoOrigin": true,
+        "daysTillHistoryExpire": 7,
+        "timezone": "Europe/Helsinki"
+    },
+    "redis": {
+        "host": "127.0.0.1",
+        "port": 6379,
+        "db": 0
+    },
+    "bot": {
+        "host": "127.0.0.1"
+    },
+    "client": {
+        "blank": {
+            "allow": true,
+            "key": false,
+            "authUrl": "",
+            "loadHistory": true
+        },
+        "smf": {
+            "allow": true,
+            "key": true,
+            "authUrl": "http://example.com/forums/ChimeraIRC-client/plugins/smf/auth.php",
+            "loadHistory": true
+        }
+    },
+    "debug": true
+}

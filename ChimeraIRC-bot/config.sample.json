@@ -1,0 +1,14 @@
+{
+    "bot": {
+        "url": "http://127.0.0.1:9898",
+        "args": "?type=bot",
+        "ircServer": "irc.quakenet.org",
+        "ircChannels": "#chimeradev",
+        "nick": "CBot",
+        "auth": {
+            "do": false,
+            "authReceiver": "",
+            "authMessage": ""
+        }
+    }
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <link rel="stylesheet" href="ChimeraIRC-client/css/bootstrapLight.css">
+  <link rel="stylesheet" href="ChimeraIRC-client/css/chimerairchat.css">
+</head>
+<body>
+
+  <div id="cChatWrapper">
+    <div id="cChatContainer">
+      <div id="cChatSettings" class="cChatPopUpContent">
+
+        <div class="row">
+          <div class="settingsToggler col-sm-2">
+            <h4>Message History Limit</h4>
+          </div>
+          <div class="col-sm-1">
+            <div class="col-sm-12"><input type="text" class="form-control" id="cChatHistoryLimitInput" placeholder="120"></div>
+          </div>
+          <div class="col-sm-2">
+            <span id="cChatMessageHistorySettingConfirmation" class="cChatSettingConfirmation" style="display:none;">Saved</span>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="settingsToggler col-sm-2">
+            <h4>New Message Sound</h4>
+          </div>
+          <div class="col-sm-4">
+            <div class="onoffswitch">
+              <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="cChatMessageSoundCheckbox" checked>
+              <label class="onoffswitch-label" for="cChatMessageSoundCheckbox">
+                <span class="onoffswitch-inner"></span>
+                <span class="onoffswitch-switch"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="settingsToggler col-sm-2">
+            <h4>Emoticons</h4>
+          </div>
+          <div class="col-sm-4">
+            <div class="onoffswitch">
+              <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="cChatShowEmoticonsCheckbox" checked>
+              <label class="onoffswitch-label" for="cChatShowEmoticonsCheckbox">
+                <span class="onoffswitch-inner"></span>
+                <span class="onoffswitch-switch"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div id="cChatEmoticons" class="cChatPopUpContent">
+        <div></div>
+      </div>
+
+      <div id="cChatMessages">
+        <section id="cChatHistoryLinkSection">
+          <span class="fakeLink" id="cChatLoadOlderHistory">Load older history</span>
+        </section>
+        <section id="cChatMessageSection" class="cChatSection" style="display:none;">
+          <div class="cChatMessageDate"></div>
+          <div class="cChatMoreHistoryAvailable">More history available for this day &#10548;</div>
+          <div class="cCmessageRow">
+            <div class="cCmessageTime"></div><div class="cCmessageUser"></div><div class="cCmessage"></div>
+          </div>
+        </section>
+      </div>
+
+      <div id="cChatTaskbar">
+
+        <div id="cChatControls" class="col-md-8">
+          <div id="cChatInput" class="col-md-2 col-lg-2">
+            <form id="cChatForm" class="form-inline">
+              <input type="text" autocomplete="off" class="messageInput" id="cChatMessageInput" maxlength="512" name="message" placeholder="Hello world.." />
+              <button type="submit" id="cChatMessageSend">Send</button>
+            </form>
+            <button id="cChatToggleEmoticons" class="toggleButton">&#9786;</button>
+          </div>
+          <div id="cChatStatus" class="col-lg-2 col-md-2">
+            <div id="cChatStatusLed"></div>
+            <div id="cChatStatusMessage">Connecting</div>
+          </div>
+        </div>
+
+        <div id="cChatButtons" class="col-lg-1 col-md-1 pull-right">
+          <button id="cChatToggleSettings" class="toggleButton">&#9881;</button>
+          <button id="cChatToggleUp" class="toggleButton cChatToggle">&#10548;</button>
+        </div>
+      </div>
+
+    </div>
+    <div class="pull-right">
+      <button id="cChatToggleDown" class="cChatToggle toggleButton" style="display: none;">&#10549;</button>
+    </div>
+    <div style="clear:both;"></div>
+  </div>
+
+  <script type="text/javascript" src="ChimeraIRC-client/js/primus.js"></script>
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="ChimeraIRC-client/js/chimerairchat.js"></script>
+  <script type="text/javascript">
+    var client = new chimeraIRChat('http://192.168.2.10:9898')
+    client.loadEmoticons()
+  </script>
+
+</body>
+</html>

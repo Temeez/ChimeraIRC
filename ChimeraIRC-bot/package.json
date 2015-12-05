@@ -1,0 +1,22 @@
+{
+  "name": "chimerairc-bot",
+  "version": "0.0.1",
+  "description": "A bot to be used with chimerairc-server",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node",
+    "irc",
+    "chat"
+  ],
+  "author": "Teemu Nieminen",
+  "license": "MIT",
+  "dependencies": {
+    "bunyan": "^1.5.1",
+    "irc": "^0.4.0",
+    "primus": "^4.0.0",
+    "ws": "^0.8.0"
+  }
+}

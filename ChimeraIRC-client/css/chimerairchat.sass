@@ -1,0 +1,250 @@
+button
+    &:hover
+        box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.2)
+
+.fakeLink
+    color: #337AB7
+
+    &:hover
+        text-decoration: underline
+        cursor: pointer
+        border: 0
+        padding: 0
+        margin: 0
+
+#cChatWrapper
+    width: 100%
+    height: 100%
+    position: relative
+    font-size: 12px
+    font-family: Helvetica, Arial, sans-serif
+
+#cChatMessages
+    width: 100%
+    height: 200px
+    overflow-y: scroll
+
+    #cChatHistoryLinkSection
+        padding: 0 4px
+        text-align: right
+
+    .cChatSection
+        border-top: 1px dashed grey
+
+        .cChatMessageDate
+            padding: 6px 0
+            font-size: 16px
+            text-align: center
+            color: #808080
+
+        .cChatMoreHistoryAvailable
+            display: none
+            padding: 3px 0
+            font-size: 10px
+
+        .cCmessageRow
+            width: auto
+            height: auto
+            display: table
+
+            .cCmessageTime
+                width: auto
+                height: auto
+                display: table-cell
+
+            .cCmessageUser
+                width: auto
+                height: auto
+                display: table-cell
+                padding: 0 3px
+                color: #764625
+
+            .cCmessage
+                width: auto
+                height: auto
+                display: table-cell
+                word-wrap: break-word
+        
+    img
+        width: auto
+        max-height: 24px
+        vertical-align: bottom
+
+
+#cChatContainer
+    [class^="col-"], .row
+        padding-left: 0
+        padding-right: 0
+
+    #cChatSettings
+        width: 100%
+        height: 87%
+        position: absolute
+        background-color: rgba(255, 255, 255, 0.9)
+        display: none
+
+        h4
+            margin-top: 8px
+            margin-bottom: 18px
+            font-size: 1.3em
+
+        .cChatSettingConfirmation
+            display: inline-block
+            padding: 4px 0 0 10px
+            font-size: 18px
+            color: #31CC26
+
+    #cChatEmoticons
+        width: 100%
+        height: 87%
+        position: absolute
+        overflow-y: scroll
+        background-color: rgba(255, 255, 255, 0.9)
+        display: none
+
+#cChatTaskbar
+    width: 100%
+    height: 23px
+    position: relative
+    padding: 3px 0
+    border-top: 1px solid gray
+
+    #cChatControls
+        width: 80%
+        height: 100%
+        position: relative
+
+        #cChatInput
+            width: 80%
+            height: 100%
+            position: relative
+
+            form
+                display: inline
+
+            input[type="text"], button[type="submit"]
+                height: 100%
+
+                outline: 0
+                border: 0
+                font-size: 12px
+                line-height: 22px
+                padding: 0
+                vertical-align: top
+
+                background: rgba(0, 0, 0, 0.1)
+
+            input[type="text"]
+                width: 78%
+                padding: 0 0 0 4px
+
+            button[type="submit"]
+                width: 10%
+
+        #cChatStatus
+            height: 100%
+            position: relative
+            padding-top: 4px
+            text-align: right
+
+            #cChatStatusMessage
+                height: 100%
+                display: inline-block
+                font-size: 12px
+
+            #cChatStatusLed
+                width: 6px
+                height: 6px
+                display: inline-block
+                border: 1px solid #000
+                border-radius: 8px
+                background-color: yellow
+
+    #cChatButtons
+        height: 100%
+        position: relative
+        text-align: right
+
+.toggleButton
+    width: 26px
+    height: 100%
+
+    padding: 0
+    border: 0
+    font-size: 16px
+    text-align: center
+    cursor: pointer
+
+    background-color: rgba(0, 0, 0, 0.1)
+
+
+
+.onoffswitch
+    position: relative
+    width: 90px
+    -webkit-user-select: none 
+    -moz-user-select: none 
+    -ms-user-select: none
+
+.onoffswitch-checkbox
+    display: none
+
+.onoffswitch-label
+    display: block
+    overflow: hidden
+    cursor: pointer
+    border: 2px solid #999999
+    border-radius: 20px
+
+.onoffswitch-inner
+    display: block
+    width: 200%
+    margin-left: -100%
+    transition: margin 0.2s ease-in 0s
+
+.onoffswitch-inner:before, .onoffswitch-inner:after
+    display: block 
+    float: left 
+    width: 50% 
+    height: 30px 
+    padding: 0 
+    line-height: 30px
+    font-size: 14px
+    color: white 
+    font-family: Trebuchet, Arial, sans-serif 
+    font-weight: bold
+    box-sizing: border-box
+
+.onoffswitch-inner:before
+    content: "ON"
+    padding-left: 10px
+    background-color: #EEEEEE
+    color: #31CC26
+
+.onoffswitch-inner:after
+    content: "OFF"
+    padding-right: 10px
+    background-color: #EEEEEE
+    color: #E83636
+    text-align: right
+
+.onoffswitch-switch
+    display: block 
+    width: 24px 
+    margin: 3px
+    background: #E83636
+    position: absolute 
+    top: 0 
+    bottom: 0
+    right: 56px
+    border: 2px solid #999999 
+    border-radius: 20px
+    transition: all 0.2s ease-in 0s 
+
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner
+    margin-left: 0
+
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch
+    right: 0px 
+    background-color: #31CC26 
+    
